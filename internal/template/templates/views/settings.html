@@ -123,6 +123,7 @@
                       {{ if eq .form.MarkReadBehavior .const.MarkAsReadOnViewButWaitForPlayerCompletion }}checked{{end}}> {{ t "form.prefs.label.mark_read_on_view_or_media_completion" }}</label>
         <label><input type="radio" name="mark_read_behavior" value="{{ .const.MarkAsReadOnlyOnPlayerCompletion }}"
                       {{ if eq .form.MarkReadBehavior .const.MarkAsReadOnlyOnPlayerCompletion }}checked{{end}}          > {{ t "form.prefs.label.mark_read_on_media_completion" }}</label>
+        <label><input type="checkbox" name="cache_for_offline" value="1" {{ if .form.CacheForOffline }}checked{{ end }}> {{ t "form.prefs.label.cache_for_offline" }}</label>
 
         <div class="buttons">
             <button type="submit" class="button button-primary" data-label-loading="{{ t "form.submit.saving" }}">{{ t "action.update" }}</button>
